@@ -1,0 +1,77 @@
+.buttons {
+	display: grid;
+	grid-template-columns: calc((100% - 4 * 0.5vw) / 5);
+	background-color: rgb(255, 255, 255);
+	gap: 0.5vw;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	padding: 1.5vw;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgb(134, 134, 134);
+	color: white;
+	border: rgb(134, 134, 134);
+	border-radius: 5px;
+}
+
+.button--equal {
+	grid-column-start: 5;
+	grid-row-start: 3;
+	grid-row-end: 5;
+	border-radius: 5px;
+	background-color: rgb(255, 109, 5);
+	color: white;
+}
+
+.button--equal:hover {
+	background-color: rgb(255, 106, 0);
+	color: white;
+	border: rgb(255, 109, 5);
+	border-radius: 16px;
+}
+
+.button--grey {
+	color: grey;
+}
+
+.button--del {
+	font-size: 0.8vw;
+}
+
+@media screen and (max-width: 1280px) {
+	button {
+		padding: calc(1.5vw * 1.2);
+		font-size: calc(1.2vw * 1.8);
+	}
+
+	.button--del {
+		font-size: calc(0.8vw * 1.8);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	button {
+		padding: calc(1.5vw * 1.8);
+		font-size: calc(1.2vw * 2.5);
+	}
+
+	.button--del {
+		font-size: calc(0.8vw * 2.5);
+	}
+}
+
+@media screen and (max-width: 360px) {
+	button {
+		padding: calc(1.5vw * 2.5);
+		font-size: calc(1.5vw * 3.375);
+	}
+
+	.button--del {
+		font-size: calc(1.5vw * 3.375);
+	}
+}

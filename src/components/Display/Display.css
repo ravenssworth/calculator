@@ -1,0 +1,50 @@
+input::placeholder {
+	color: black;
+}
+
+.display {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	padding: 10px;
+}
+
+.display__input,
+.display__value {
+	text-align: right;
+	background-color: transparent;
+	backdrop-filter: blur(10px);
+	border: none;
+	width: 100%;
+}
+
+.display__input:focus-visible,
+.display__value:focus-visible {
+	outline-style: none;
+	outline-width: 0px;
+}
+
+.display__input {
+	font-weight: 700;
+	color: black;
+	font-size: 2vw;
+}
+
+@media screen and (max-width: 1280px) {
+	.display__input {
+		font-size: 2.8vw;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.display__input {
+		font-size: 3.8vw;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.display__input {
+		font-size: 7.2vw;
+	}
+}
