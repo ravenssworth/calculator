@@ -20,7 +20,7 @@ function Display({ inputValue, answer }) {
 						className='display__value'
 						placeholder='0'
 						maxLength={14}
-						value={answer}
+						value={inputValue}
 						readOnly
 					/>
 					<input
@@ -28,7 +28,7 @@ function Display({ inputValue, answer }) {
 						className='display__input'
 						placeholder='0'
 						maxLength={14}
-						value={inputValue}
+						value={answer}
 						readOnly
 					/>
 				</>

@@ -8,6 +8,12 @@ function Buttons({ onButtonClick }) {
 
 	return (
 		<div className='buttons'>
+			<button className='button--grey' onClick={() => handleClick('sin')}>
+				sin
+			</button>
+			<button className='button--grey' onClick={() => handleClick('ln')}>
+				ln
+			</button>
 			<button className='button--black' onClick={() => handleClick('7')}>
 				7
 			</button>
@@ -22,6 +28,12 @@ function Buttons({ onButtonClick }) {
 			</button>
 			<button className='button--grey' onClick={() => handleClick('(')}>
 				(
+			</button>
+			<button className='button--grey' onClick={() => handleClick('сos')}>
+				cos
+			</button>
+			<button className='button--grey' onClick={() => handleClick('log')}>
+				log
 			</button>
 			<button className='button--black' onClick={() => handleClick('4')}>
 				4
@@ -38,6 +50,12 @@ function Buttons({ onButtonClick }) {
 			<button className='button--grey' onClick={() => handleClick(')')}>
 				)
 			</button>
+			<button className='button--grey' onClick={() => handleClick('tan')}>
+				tan
+			</button>
+			<button className='button--grey' onClick={() => handleClick('e')}>
+				e
+			</button>
 			<button className='button--black' onClick={() => handleClick('1')}>
 				1
 			</button>
@@ -49,6 +67,12 @@ function Buttons({ onButtonClick }) {
 			</button>
 			<button className='button--grey' onClick={() => handleClick('-')}>
 				-
+			</button>
+			<button className='button--grey' onClick={() => handleClick('^')}>
+				^
+			</button>
+			<button className='button--grey' onClick={() => handleClick('sqrt')}>
+				√
 			</button>
 			<button className='button--black' onClick={() => handleClick('0')}>
 				0

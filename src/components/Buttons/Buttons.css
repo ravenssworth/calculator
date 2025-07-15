@@ -1,6 +1,6 @@
 .buttons {
 	display: grid;
-	grid-template-columns: calc((100% - 4 * 0.5vw) / 5);
+	grid-template-columns: repeat(7, 1fr);
 	background-color: rgb(255, 255, 255);
 	gap: 0.5vw;
 }
@@ -20,9 +20,9 @@ button:hover {
 }
 
 .button--equal {
-	grid-column-start: 5;
+	grid-column-start: 7;
 	grid-row-start: 3;
-	grid-row-end: 5;
+	grid-row-end: 7;
 	border-radius: 5px;
 	background-color: rgb(255, 109, 5);
 	color: white;
@@ -37,10 +37,17 @@ button:hover {
 
 .button--grey {
 	color: grey;
+	font-size: 1.2vw;
+}
+
+.button--black,
+.button--del {
+	font-size: 1.4vw;
+	font-weight: 700;
 }
 
 .button--del {
-	font-size: 0.8vw;
+	font-size: 1vw;
 }
 
 @media screen and (max-width: 1280px) {

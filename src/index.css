@@ -20,7 +20,7 @@ body,
 }
 
 .content {
-	width: 25%;
+	width: 40%;
 	border-radius: 10px;
 	padding: 1.3vw;
 	background-color: white;
@@ -28,14 +28,14 @@ body,
 
 @media screen and (max-width: 1280px) {
 	.content {
-		width: 40%;
+		width: 60%;
 		padding: 1.8vw;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.content {
-		width: 60%;
+		width: 80%;
 		padding: 2.6vw;
 	}
 }
@@ -43,6 +43,5 @@ body,
 @media screen and (max-width: 360px) {
 	.content {
 		width: 100%;
-		padding: 5.2vw;
 	}
 }

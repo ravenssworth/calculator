@@ -9,19 +9,34 @@ function Calculator() {
 
 	const handleButtonClick = value => {
 		if (value === 'DEL') {
-			setInputValue(prev => prev.slice(0, -1))
+			if (answer !== '') {
+				setInputValue('')
+				setAnswer('')
+			} else {
+				setInputValue(prev => prev.slice(0, -1))
+			}
 		} else if (value === '=') {
 			try {
-				const expression = inputValue
+				let expression = inputValue
 					.replace(/x/g, '*')
 					.replace(/÷/g, '/')
 					.replace(/,/g, '.')
+					.replace(/\^/g, '**')
+					.replace(/sqrt/g, 'Math.sqrt')
+					.replace(/sin/g, 'Math.sin')
+					.replace(/cos/g, 'Math.cos')
+					.replace(/tan/g, 'Math.tan')
+					.replace(/log/g, 'Math.log10')
+					.replace(/ln/g, 'Math.log')
+					.replace(/e/g, 'Math.E')
+
 				const result = eval(expression)
 				setAnswer(result.toString())
 			} catch {
 				setAnswer('Ошибка: некорректное выражение')
 			}
 		} else {
+			if (answer !== '') setAnswer('')
 			setInputValue(prev => prev + value)
 		}
 	}
