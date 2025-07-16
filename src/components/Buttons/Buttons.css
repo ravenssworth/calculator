@@ -1,6 +1,20 @@
 .buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.buttons__grid-left {
 	display: grid;
-	grid-template-columns: repeat(7, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	background-color: rgb(255, 255, 255);
+	place-items: center;
+}
+
+.buttons__grid-right {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
 	background-color: rgb(255, 255, 255);
 	gap: 0.5vw;
 }
@@ -8,7 +22,6 @@
 button {
 	border: none;
 	background-color: transparent;
-	padding: 1.5vw;
 	cursor: pointer;
 }
 
@@ -19,10 +32,26 @@ button:hover {
 	border-radius: 5px;
 }
 
+.buttons__grid-left button {
+	font-size: 0.8vw;
+	color: grey;
+	height: fit-content;
+	padding: 0.6vw 1.1vw;
+}
+
+.buttons__grid-left button:hover {
+	color: rgb(255, 255, 255);
+}
+
+.buttons__grid-right button {
+	font-size: 1.4vw;
+	padding: 1.1vw;
+}
+
 .button--equal {
-	grid-column-start: 7;
+	grid-column-start: 5;
 	grid-row-start: 3;
-	grid-row-end: 7;
+	grid-row-end: 5;
 	border-radius: 5px;
 	background-color: rgb(255, 109, 5);
 	color: white;
@@ -37,48 +66,185 @@ button:hover {
 
 .button--grey {
 	color: grey;
-	font-size: 1.2vw;
 }
 
-.button--black,
-.button--del {
-	font-size: 1.4vw;
-	font-weight: 700;
-}
-
-.button--del {
+.buttons__grid-right .button--del {
 	font-size: 1vw;
 }
 
+.show-left-panel-btn,
+.hide-left-panel-btn {
+	display: none;
+}
+
 @media screen and (max-width: 1280px) {
-	button {
-		padding: calc(1.5vw * 1.2);
-		font-size: calc(1.2vw * 1.8);
+	.buttons__grid-right {
+		gap: 6.4px;
+		width: 299.78px;
 	}
 
-	.button--del {
-		font-size: calc(0.8vw * 1.8);
+	.buttons__grid-left button {
+		font-size: 10.24px;
+		padding: 7.68px 14.08px;
+	}
+
+	.buttons__grid-right button {
+		font-size: 17.92px;
+		padding: 14.08px;
+	}
+
+	.buttons__grid-right .button--del {
+		font-size: 12.8px;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	button {
-		padding: calc(1.5vw * 1.8);
-		font-size: calc(1.2vw * 2.5);
+	.buttons {
+		flex-direction: column;
 	}
 
-	.button--del {
-		font-size: calc(0.8vw * 2.5);
+	.buttons__grid-left {
+		grid-template-columns: repeat(5, 1fr);
+		gap: 3.84px;
+	}
+
+	.buttons__grid-left button {
+		font-size: 13.82px;
+	}
+
+	.buttons__grid-right button {
+		font-size: 18.43px;
+		padding: 8.45px;
+	}
+
+	.buttons__grid-right {
+		width: auto;
+	}
+
+	.buttons__grid-right .button--del {
+		font-size: 11.68px;
+	}
+
+	.button--equal {
+		grid-column-start: 4;
+		grid-row-start: 4;
+		grid-column-end: 6;
 	}
 }
 
-@media screen and (max-width: 360px) {
-	button {
-		padding: calc(1.5vw * 2.5);
-		font-size: calc(1.5vw * 3.375);
+@media screen and (max-width: 550px) {
+	.show-left-panel-btn,
+	.hide-left-panel-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: grey;
+		padding: 5px 0;
 	}
 
-	.button--del {
-		font-size: calc(1.5vw * 3.375);
+	.show-left-panel-btn span {
+		font-size: 2.4vw;
+	}
+
+	.show-left-panel-btn:hover,
+	.buttons__grid-left .hide-left-panel-btn:hover {
+		background-color: rgb(255, 255, 255);
+		border: rgb(255, 255, 255);
+		color: grey;
+	}
+
+	.buttons__grid-right {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 6px 25px;
+	}
+	.button--equal {
+		grid-column-start: 4;
+		grid-row-start: 7;
+		grid-column-end: 4;
+	}
+
+	.buttons__grid-right .button--del {
+		font-size: 10.5px;
+	}
+
+	.buttons__grid-left {
+		grid-template-columns: repeat(5, 1fr);
+		gap: 0.5vw;
+		display: none;
+	}
+
+	.buttons__grid-left button {
+		font-size: 2.4vw;
+	}
+
+	.buttons__grid-right button {
+		font-size: 4vw;
+		padding: 1.8vw;
+	}
+
+	#button-6 {
+		grid-column-start: 1;
+		grid-row-start: 2;
+		grid-column-end: 1;
+	}
+
+	#button-7 {
+		grid-column-start: 2;
+		grid-row-start: 2;
+		grid-column-end: 2;
+	}
+
+	#button-8 {
+		grid-column-start: 3;
+		grid-row-start: 2;
+		grid-column-end: 3;
+	}
+
+	#button-10 {
+		grid-column-start: 4;
+		grid-row-start: 3;
+		grid-column-end: 4;
+	}
+
+	#button-11 {
+		grid-column-start: 1;
+		grid-row-start: 3;
+		grid-column-end: 1;
+	}
+
+	#button-12 {
+		grid-column-start: 2;
+		grid-row-start: 3;
+		grid-column-end: 2;
+	}
+
+	#button-13 {
+		grid-column-start: 3;
+		grid-row-start: 3;
+		grid-column-end: 3;
+	}
+
+	#button-15 {
+		grid-column-start: 1;
+		grid-row-start: 4;
+		grid-column-end: 1;
+	}
+
+	#button-16 {
+		grid-column-start: 2;
+		grid-row-start: 4;
+		grid-column-end: 2;
+	}
+
+	#button-17 {
+		grid-column-start: 3;
+		grid-row-start: 4;
+		grid-column-end: 3;
+	}
+
+	#button-19 {
+		grid-column-start: 3;
+		grid-row-start: 5;
+		grid-column-end: 5;
 	}
 }

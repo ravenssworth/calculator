@@ -1,5 +1,5 @@
 input::placeholder {
-	color: rgb(255, 109, 5);
+	color: black;
 }
 
 .display {
@@ -19,6 +19,11 @@ input::placeholder {
 	width: 100%;
 }
 
+.display__input.error {
+	font-size: 1.3vw;
+	color: #940909;
+}
+
 .display__input:focus-visible,
 .display__value:focus-visible {
 	outline-style: none;
@@ -27,24 +32,32 @@ input::placeholder {
 
 .display__input {
 	font-weight: 700;
-	color: rgb(255, 109, 5);
-	font-size: 3vw;
+	color: black;
+	font-size: 2.7vw;
 }
 
 @media screen and (max-width: 1280px) {
 	.display__input {
-		font-size: 2.8vw;
+		font-size: 35.84px;
+	}
+
+	.display__input.error {
+		font-size: 17.48px;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.display__input {
-		font-size: 3.8vw;
+		font-size: 29.18px;
 	}
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 550px) {
 	.display__input {
 		font-size: 7.2vw;
+	}
+
+	.display__input.error {
+		font-size: 13.8px;
 	}
 }
