@@ -30,6 +30,11 @@ input::placeholder {
 	outline-width: 0px;
 }
 
+.display__value {
+	font-size: 1.2vw;
+	font-weight: 300;
+}
+
 .display__input {
 	font-weight: 700;
 	color: black;
@@ -44,11 +49,19 @@ input::placeholder {
 	.display__input.error {
 		font-size: 17.48px;
 	}
+
+	.display__value {
+		font-size: 13px;
+	}
 }
 
 @media screen and (max-width: 768px) {
 	.display__input {
 		font-size: 29.18px;
+	}
+
+	.display__value {
+		font-size: 13px;
 	}
 }
 
@@ -59,5 +72,9 @@ input::placeholder {
 
 	.display__input.error {
 		font-size: 13.8px;
+	}
+
+	.display__value {
+		font-size: 3.5vw;
 	}
 }
